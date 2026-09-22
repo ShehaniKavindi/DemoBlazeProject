@@ -1,87 +1,201 @@
-DemoBlaze Selenium Java Automation Project
-===========================================
-Unit: HF2W - Software Engineering II (Software Testing, QA and Maintenance)
-Component A - Selenium Java Automation Project
+# DemoBlaze Selenium Java Automation Project
 
-PROJECT PURPOSE
----------------
-Beginner-level automated smoke/regression suite for https://www.demoblaze.com/
-covering: home page smoke check, product selection, add-to-cart with alert
-handling, cart management (add/remove/count via findElements + loop), and
-checkout validation (invalid empty submit, then valid submit).
+---
 
-ENVIRONMENT
------------
-- Java JDK 17+
-- Apache Maven 3.9+
-- Selenium WebDriver 4.21.0
-- TestNG 7.10.2
-- Google Chrome (latest)
-- IDE: IntelliJ IDEA or Eclipse
+## 📌 Project Purpose
 
-PROJECT STRUCTURE
-------------------
-pom.xml                                    - Maven dependencies (Selenium + TestNG)
-testng.xml                                 - TestNG suite definition
-src/test/java/tests/BaseTest.java          - shared WebDriver setup/teardown
-src/test/java/tests/DemoBlazeTests.java    - the 5 required @Test methods (TC01-TC05)
-screenshots/                               - execution evidence (add your own screenshots here)
+This project is a beginner-level automated smoke/regression test suite for the [DemoBlaze](https://www.demoblaze.com/) online store.
 
-HOW TO RUN
-----------
-Option A - IDE:
-  1. Open this folder as a Maven project in IntelliJ/Eclipse.
-  2. Let Maven download dependencies (first time only).
-  3. Right-click testng.xml -> Run.
+The automation suite covers:
 
-Option B - Command line (from the project root):
-  mvn test
+- Home page smoke testing
+- Product selection
+- Adding products to the cart
+- JavaScript alert handling
+- Cart management
+- Counting cart items using `findElements()` and a loop
+- Removing products from the cart
+- Checkout validation
+- Invalid and valid checkout scenarios
 
-TEST CASES IMPLEMENTED
------------------------
-TC01 - Home Page Smoke Test
-  Verifies a non-empty page title and that the "PRODUCT STORE" heading is displayed.
+---
 
-TC02 - Product Selection
-  Opens Phones category, selects Samsung galaxy s6, verifies the product
-  heading, and prints the price to the console.
+## 📚 Technologies Used
 
-TC03 - Add to Cart
-  Adds Samsung galaxy s6, waits for the JavaScript alert, prints its text,
-  and accepts it.
+- Java
+- Apache Maven
+- Selenium WebDriver
+- TestNG
+- Google Chrome
+- IntelliJ IDEA / Eclipse
 
-TC04 - Cart Management
-  Adds Samsung galaxy s6 and Nokia lumia 1520, counts and prints cart rows
-  using findElements() + a loop, removes Nokia lumia 1520, verifies exactly
-  one row remains and that it is Samsung galaxy s6, then prints the cart total.
+---
 
-TC05 - Checkout Validation
-  From a cart containing Samsung galaxy s6: first clicks Purchase with all
-  fields empty and verifies the resulting alert mentions the missing
-  Name/Card details; then fills the form with fictitious test data and
-  verifies the "Thank you for your purchase!" success message.
+## 🛠️ Environment
 
-FICTITIOUS CHECKOUT DATA USED (no real personal/payment data)
----------------------------------------------------------------
-Name: Test Student | Country: Sri Lanka | City: Colombo
-Card: 4111111111111111 (test data only) | Month: 12 | Year: 2027
+| Technology | Version |
+|---|---|
+| Java JDK | 17+ |
+| Apache Maven | 3.9+ |
+| Selenium WebDriver | 4.21.0 |
+| TestNG | 7.10.2 |
+| Browser | Google Chrome (latest) |
+| IDE | IntelliJ IDEA / Eclipse |
 
-ASSUMPTIONS & KNOWN LIMITATIONS
----------------------------------
-- DemoBlaze is a public demo site; its markup can change without notice.
-  Locators were verified against the current live structure at the time of
-  writing, but should be re-checked (right-click -> Inspect) if a test fails
-  on exam day.
-- The "invalid checkout" scenario relies on DemoBlaze's own client-side
-  check, which raises a JavaScript alert mentioning the missing Name/Card
-  fields rather than an inline form error message.
-- No login/registration flow is included, as it is outside the assignment
-  scope (guest checkout only).
+---
 
-AUTHENTICITY NOTE
-------------------
-This code was generated with AI assistance as a learning/starting-point
-resource. Before submission and the viva voce, review every method until
-you can explain: why each locator was chosen, what each explicit wait is
-waiting for, what each assertion checks, and how the cleanup guarantees
-the browser closes. You will be asked to modify and re-run this code live.
+## 📁 Project Structure
+
+```text
+DemoBlazeProject/
+│
+├── pom.xml
+├── testng.xml
+├── README.md
+│
+├── screenshots/
+│   └── Execution evidence and test screenshots
+│
+└── src/
+    └── test/
+        └── java/
+            └── tests/
+                ├── BaseTest.java
+                └── DemoBlazeTests.java
+```
+
+---
+
+## ▶️ How to Run
+
+### Option A — IntelliJ IDEA / Eclipse
+
+1. Open this folder as a Maven project.
+2. Allow Maven to download the required dependencies.
+3. Make sure Google Chrome is installed.
+4. Right-click `testng.xml`.
+5. Select **Run**.
+
+### Option B — Command Line
+
+Open a terminal in the project root directory and run:
+
+```bash
+mvn test
+```
+
+---
+
+## 🧪 Test Cases Implemented
+
+### TC01 — Home Page Smoke Test
+
+Verifies that:
+
+- The page title is not empty.
+- The **PRODUCT STORE** heading is displayed.
+
+### TC02 — Product Selection
+
+Verifies that:
+
+- The **Phones** category is opened.
+- **Samsung galaxy s6** is selected.
+- The product heading is displayed.
+- The product price is printed to the console.
+
+### TC03 — Add to Cart
+
+Verifies that:
+
+- **Samsung galaxy s6** is added to the cart.
+- The JavaScript alert is detected.
+- The alert text is printed to the console.
+- The alert is accepted.
+
+### TC04 — Cart Management
+
+Verifies that:
+
+- **Samsung galaxy s6** is added to the cart.
+- **Nokia lumia 1520** is added to the cart.
+- Cart rows are counted using `findElements()` and a loop.
+- **Nokia lumia 1520** is removed.
+- Exactly one cart row remains.
+- The remaining product is **Samsung galaxy s6**.
+- The cart total is printed to the console.
+
+### TC05 — Checkout Validation
+
+The test starts with a cart containing **Samsung galaxy s6**.
+
+#### Invalid Checkout
+
+The Purchase button is clicked with all fields empty.
+
+The test verifies that the resulting JavaScript alert mentions the missing **Name/Card** details.
+
+#### Valid Checkout
+
+The form is then filled with fictitious test data.
+
+The test verifies the successful checkout message:
+
+```text
+Thank you for your purchase!
+```
+
+---
+
+## 🔐 Fictitious Checkout Data
+
+No real personal or payment information is used.
+
+| Field | Test Data |
+|---|---|
+| Name | Test Student |
+| Country | Sri Lanka |
+| City | Colombo |
+| Card | `4111111111111111` |
+| Month | `12` |
+| Year | `2027` |
+
+> **Note:** The card number above is used only as fictitious test data for the automation scenario.
+
+---
+
+## 📸 Screenshots
+
+Execution evidence can be stored in the:
+
+```text
+screenshots/
+```
+
+directory.
+
+Recommended screenshots include:
+
+- Home page test execution
+- Product selection
+- Add-to-cart alert
+- Cart management
+- Invalid checkout alert
+- Successful checkout message
+
+---
+
+## ⚠️ Assumptions & Known Limitations
+
+- DemoBlaze is a public demonstration website, and its HTML structure or behavior may change without notice.
+- Locators were verified against the live website at the time of development.
+- If a test fails because of a changed element, the locator should be re-checked using **Right-click → Inspect**.
+- The invalid checkout scenario relies on DemoBlaze's client-side validation, which displays a JavaScript alert mentioning missing Name/Card details rather than an inline form error.
+- The project does not include login or registration automation because these features are outside the assignment scope.
+- The tests use the guest checkout flow.
+
+---
+
+
+**Unit:** HF2W - Software Engineering II (Software Testing, QA and Maintenance)  
+**Component A:** Selenium Java Automation Project
