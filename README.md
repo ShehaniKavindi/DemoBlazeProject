@@ -54,7 +54,16 @@ DemoBlazeProject/
 ├── README.md
 │
 ├── screenshots/
-│   └── Execution evidence and test screenshots
+│   ├── 03_TC03_add_to_cart_alert.png
+│   ├── 04_TC04_cart_before_removal.png
+│   ├── 06_code_BaseTest.png
+│   ├── 07_code_DemoBlazeTests.png
+│   ├── 08_code_pom.xml.png
+│   ├── 09_code_testng.xml.png
+│   ├── 10_TestNG_console_output_part1.png
+│   ├── 11_TestNG_results_summary_5passed.png
+│   ├── 12_TC04_run_pass_with_cart_log.png
+│   └── 13_final_5tests_passed_run.png
 │
 └── src/
     └── test/
@@ -70,7 +79,7 @@ DemoBlazeProject/
 
 ### Option A — IntelliJ IDEA / Eclipse
 
-1. Open this folder as a Maven project.
+1. Open the project as a Maven project.
 2. Allow Maven to download the required dependencies.
 3. Make sure Google Chrome is installed.
 4. Right-click `testng.xml`.
@@ -137,7 +146,7 @@ The test verifies that the resulting JavaScript alert mentions the missing **Nam
 
 #### Valid Checkout
 
-The form is then filled with fictitious test data.
+The form is filled with fictitious test data.
 
 The test verifies the successful checkout message:
 
@@ -160,28 +169,51 @@ No real personal or payment information is used.
 | Month | `12` |
 | Year | `2027` |
 
-> **Note:** The card number above is used only as fictitious test data for the automation scenario.
-
 ---
 
-## 📸 Screenshots
+## 📸 Test Evidence
 
-Execution evidence can be stored in the:
+The `screenshots/` folder contains screenshots showing the test implementation and execution results.
 
-```text
-screenshots/
-```
+### Add to Cart Alert
 
-directory.
+![TC03 Add to Cart Alert](screenshots/03_TC03_add_to_cart_alert.png)
 
-Recommended screenshots include:
+### Cart Before Removal
 
-- Home page test execution
-- Product selection
-- Add-to-cart alert
-- Cart management
-- Invalid checkout alert
-- Successful checkout message
+![TC04 Cart Before Removal](screenshots/04_TC04_cart_before_removal.png)
+
+### BaseTest Implementation
+
+![BaseTest](screenshots/06_code_BaseTest.png)
+
+### DemoBlaze Tests
+
+![DemoBlaze Tests](screenshots/07_code_DemoBlazeTests.png)
+
+### Maven Configuration
+
+![pom.xml](screenshots/08_code_pom.xml.png)
+
+### TestNG Configuration
+
+![testng.xml](screenshots/09_code_testng.xml.png)
+
+### TestNG Console Output
+
+![TestNG Console Output](screenshots/10_TestNG_console_output_part1.png)
+
+### Test Results — 5 Tests Passed
+
+![TestNG Results](screenshots/11_TestNG_results_summary_5passed.png)
+
+### TC04 Cart Test Execution
+
+![TC04 Test Execution](screenshots/12_TC04_run_pass_with_cart_log.png)
+
+### Final Test Run — 5 Tests Passed
+
+![Final Test Run](screenshots/13_final_5tests_passed_run.png)
 
 ---
 
@@ -196,6 +228,11 @@ Recommended screenshots include:
 
 ---
 
+## Developer
 
+**Shehani Kavindi**  
+Software Engineering — Birmingham City University
 **Unit:** HF2W - Software Engineering II (Software Testing, QA and Maintenance)  
 **Component A:** Selenium Java Automation Project
+
+---
