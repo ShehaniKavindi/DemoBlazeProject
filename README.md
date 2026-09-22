@@ -175,45 +175,13 @@ No real personal or payment information is used.
 
 The `screenshots/` folder contains screenshots showing the test implementation and execution results.
 
-### Add to Cart Alert
-
-![TC03 Add to Cart Alert](screenshots/03_TC03_add_to_cart_alert.png)
-
-### Cart Before Removal
-
-![TC04 Cart Before Removal](screenshots/04_TC04_cart_before_removal.png)
-
-### BaseTest Implementation
-
-![BaseTest](screenshots/06_code_BaseTest.png)
-
-### DemoBlaze Tests
-
-![DemoBlaze Tests](screenshots/07_code_DemoBlazeTests.png)
-
-### Maven Configuration
-
-![pom.xml](screenshots/08_code_pom.xml.png)
-
-### TestNG Configuration
-
-![testng.xml](screenshots/09_code_testng.xml.png)
-
-### TestNG Console Output
-
-![TestNG Console Output](screenshots/10_TestNG_console_output_part1.png)
-
-### Test Results — 5 Tests Passed
-
-![TestNG Results](screenshots/11_TestNG_results_summary_5passed.png)
-
-### TC04 Cart Test Execution
-
-![TC04 Test Execution](screenshots/12_TC04_run_pass_with_cart_log.png)
-
-### Final Test Run — 5 Tests Passed
-
-![Final Test Run](screenshots/13_final_5tests_passed_run.png)
+| | |
+|---|---|
+| **Add to Cart Alert**<br><br>![TC03 Add to Cart Alert](screenshots/03_TC03_add_to_cart_alert.png) | **Cart Before Removal**<br><br>![TC04 Cart Before Removal](screenshots/04_TC04_cart_before_removal.png) |
+| **BaseTest Implementation**<br><br>![BaseTest](screenshots/06_code_BaseTest.png) | **DemoBlaze Tests**<br><br>![DemoBlaze Tests](screenshots/07_code_DemoBlazeTests.png) |
+| **Maven Configuration**<br><br>![pom.xml](screenshots/08_code_pom.xml.png) | **TestNG Configuration**<br><br>![testng.xml](screenshots/09_code_testng.xml.png) |
+| **TestNG Console Output**<br><br>![TestNG Console Output](screenshots/10_TestNG_console_output_part1.png) | **Test Results — 5 Tests Passed**<br><br>![TestNG Results](screenshots/11_TestNG_results_summary_5passed.png) |
+| **TC04 Cart Test Execution**<br><br>![TC04 Test Execution](screenshots/12_TC04_run_pass_with_cart_log.png) | **Final Test Run — 5 Tests Passed**<br><br>![Final Test Run](screenshots/13_final_5tests_passed_run.png) |
 
 ---
 
